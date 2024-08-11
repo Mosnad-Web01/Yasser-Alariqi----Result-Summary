@@ -1,4 +1,3 @@
-// Function to update card data
 function updateCardData(data, index) {
     const cardItem = document.querySelectorAll(".card-item")[index];
     const icon = cardItem.querySelector("figure img");
@@ -12,14 +11,12 @@ function updateCardData(data, index) {
     scoreTotal.textContent = "/ 100";
 }
 
-// Fetch and apply data from JSON
 window.addEventListener("load", function() {
     fetch("./data.json")
         .then(response => response.json())
         .then(data => {
-            // Loop through each card item and update data
             data.forEach((item, index) => {
-                if (index < 4) { // Ensure you don't exceed the number of card items
+                if (index < 4) { 
                     updateCardData(data, index);
                 }
             });
