@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0px 2px 20px rgba(26, 0, 196, 0.1);
+    border-radius: 30px;
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+}
+
+.result {
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 20px;
+    border-radius: 30px; /* Applies the 30px radius to all corners */
+    box-shadow: none; /* Removes the inner box shadow */
+}
+
+.result-header-title {
+    color: hsl(241, 100%, 89%);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+}
+
+.score-circle {
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    width: 10rem;
+    height: 10rem;
+    margin: 20px auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-circle h2 {
+    font-size: 3.4rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.score-circle p {
+    color: hsl(241, 100%, 89%);
+    font-size: 0.9rem;
+}
+
+.Great-text-heading {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.greating-p {
+    color: hsl(241, 100%, 89%);
+    padding: 20px;
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.summary {
+    padding: 20px;
+}
+
+.summary-title {
+    color: hsl(224, 30%, 27%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+}
+.results-section .card-item {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.card-item-title {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.card-item:nth-child(1) {
+    background-color:   hsla(0, 100%, 95%, 0.49);
+}
+.card-item:nth-child(1) .card-item-title {
+    color: hsl(0, 100%, 67%);
+}
+.card-item:nth-child(2) {
+    background-color:   hsl(39, 100%, 96%);
+}
+.card-item:nth-child(2) .card-item-title {
+    color: hsl(39, 100%, 56%)
+}
+.card-item:nth-child(3) {
+    background-color:   hsl(166, 100%, 96%);
+}
+.card-item:nth-child(3) .card-item-title {
+    color: hsl(166, 100%, 37%)
+}
+.card-item:nth-child(4) {
+    background-color:   hsl(221, 100%, 96%);
+}
+.card-item:nth-child(4) .card-item-title {
+    color: hsl(234, 85%, 45%)
+}
+
+.card-item p {
+    font-size: 0.9rem;
+    color: hsla(224, 30%, 27%, 0.484);
+    font-weight: 600;
+}
+
+.card-item p span {
+    color: hsl(224, 30%, 27%);
+    font-weight: 700;
+}
+
+.continue-button {
+    width: 100%;
+    border-radius: 40px;
+    padding: 15px 0px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: hsl(224, 30%, 27%);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+.continue-button:hover {
+    background-color: hsla(224, 30%, 27%, 0.763);
+}
+
+
+
+@media (max-width: 688px) {
+    .card-section {
+        grid-template-columns: 1fr;
+    }
+
+    .result {
+        border-radius: 0px 0px 30px 30px; /* Forces the border-radius change */
+    }
+    .card-section {
+        border-radius:0px 0px 30px 30px;
+    }
+    
+}

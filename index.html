@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <main>
+      <div class="card-container">
+        <section class="card-section">
+          <div class="result">
+            <h1 class="result-header-title">Your Result</h1>
+            <div class="score-circle">
+              <h2>76</h2>
+              <p>of 100</p>
+            </div>
+            <h2 class="Great-text-heading">Great</h2>
+            <p class="greating-p">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+          <div class="summary">
+            <h1 class="summary-title">Summary</h1>
+            <section class="results-section">
+              <div class="card-item">
+                <div class="card-item-title">
+                  <figure>
+                    <img id="icon"  src="./assets/images/icon-reaction.svg" alt="" />
+                  </figure>
+                  <h3 id="cardTitle">Reaction</h3>
+                </div>
+                <p id="score"><span id="score-span">80</span> <span id="score-total">/ 100</span></p>
+              </div>
+              <div class="card-item">
+                <div class="card-item-title">
+                  <figure>
+                    <img id="icon"  src="./assets/images/icon-memory.svg" alt="" />
+                  </figure>
+                  <h3  id="cardTitle">Memory</h3>
+                </div>
+                <p id="score"><span id="score-span">92</span> <span id="score-total">/ 100</span></p>
+              </div>
+              <div class="card-item">
+                <div class="card-item-title">
+                  <figure>
+                    <img id="icon" src="./assets/images/icon-verbal.svg" alt="" />
+                  </figure>
+                  <h3 id="cardTitle">Verbal</h3>
+                </div>
+                <p id="score"><span id="score-span">61</span> <span id="score-total">/ 100</span></p>
+              </div>
+              <div class="card-item">
+                <div class="card-item-title">
+                  <figure>
+                    <img id="icon"  src="./assets/images/icon-visual.svg" alt="" />
+                  </figure>
+                  <h3 id="cardTitle">Visual</h3>
+                </div>
+                <p id="score"><span id="score-span">72</span> <span id="score-total">/ 100</span></p>
+              </div>
+            </section>
+            <button class="continue-button">Continue</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
