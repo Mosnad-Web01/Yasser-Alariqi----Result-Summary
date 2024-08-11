@@ -1,18 +1,28 @@
-const icon = document.getElementById("icon")
-const cardTitle = document.getElementById("cardTitle")
-const scoreValue = document.getElementById('score-span');
-const scoreTotal = document.getElementById('score-total');
+// Function to update card data
+function updateCardData(data, index) {
+    const cardItem = document.querySelectorAll(".card-item")[index];
+    const icon = cardItem.querySelector("figure img");
+    const cardTitle = cardItem.querySelector("h3");
+    const scoreValue = cardItem.querySelector("#score-span");
+    const scoreTotal = cardItem.querySelector("#score-total");
 
+    icon.setAttribute("src", data[index].icon);
+    cardTitle.textContent = data[index].category;
+    scoreValue.textContent = data[index].score;
+    scoreTotal.textContent = "/ 100";
+}
 
-let 
-fetch("./data.json").then((repsonse) => {
-    return repsonse.json()
-}).then((data) => {
-    
-    for (let i = 0; i <= 4; i++) {
-        console.log(data[i].category);
-        console.log(data[i].score);
-        console.log(data[i].icon);
-    }
-    
-})
+// Fetch and apply data from JSON
+window.addEventListener("load", function() {
+    fetch("./data.json")
+        .then(response => response.json())
+        .then(data => {
+            // Loop through each card item and update data
+            data.forEach((item, index) => {
+                if (index < 4) { // Ensure you don't exceed the number of card items
+                    updateCardData(data, index);
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
